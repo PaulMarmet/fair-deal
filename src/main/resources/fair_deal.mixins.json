@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.pm.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "TradeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

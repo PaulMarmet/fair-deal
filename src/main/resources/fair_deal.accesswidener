@@ -1,0 +1,8 @@
+accessWidener v2 named
+
+accessible class net/minecraft/village/TradeOffers$EmptyFactory
+accessible method net/minecraft/village/TradeOffers$EmptyFactory <init> ()V
+accessible class net/minecraft/village/TradeOffers$ProcessItemFactory
+accessible method net/minecraft/village/TradeOffers$ProcessItemFactory <init> (Lnet/minecraft/item/ItemConvertible;IILnet/minecraft/item/ItemConvertible;IIIFLnet/minecraft/registry/RegistryKey;)V
+accessible class net/minecraft/village/TradeOffers$TypedWrapperFactory
+accessible method net/minecraft/village/TradeOffers$TypedWrapperFactory <init> (Ljava/util/Map;)V
