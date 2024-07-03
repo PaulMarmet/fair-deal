@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "fair_deal:emerald_gem_from_shard"
+    ]
+  },
+  "criteria": {
+    "has_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["fair_deal:emerald_shard"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "fair_deal:emerald_gem_from_shard"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_shard",
+      "has_the_recipe"
+    ]
+  ]
+}

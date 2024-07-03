@@ -1,7 +1,8 @@
-package net.pm;
+package net.pm.fair_deal;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.pm.fair_deal.item.FairDealItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +12,6 @@ public class FairDeal implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		FairDealItems.registerModItems();
 	}
 }

@@ -7,12 +7,12 @@
 	"authors": [
 		"Paul Marmet"
 	],
-	"license": "CC0-1.0",
+	"license": "ARR",
 	"icon": "assets/fair_deal/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.pm.FairDeal"
+			"net.pm.fair_deal.FairDeal"
 		]
 	},
 	"mixins": [

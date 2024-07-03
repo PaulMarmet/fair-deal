@@ -6,3 +6,8 @@ accessible class net/minecraft/village/TradeOffers$ProcessItemFactory
 accessible method net/minecraft/village/TradeOffers$ProcessItemFactory <init> (Lnet/minecraft/item/ItemConvertible;IILnet/minecraft/item/ItemConvertible;IIIFLnet/minecraft/registry/RegistryKey;)V
 accessible class net/minecraft/village/TradeOffers$TypedWrapperFactory
 accessible method net/minecraft/village/TradeOffers$TypedWrapperFactory <init> (Ljava/util/Map;)V
+accessible method net/minecraft/village/TradeOffers copyToFastUtilMap (Lcom/google/common/collect/ImmutableMap;)Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;
+accessible method net/minecraft/village/TradeOffers createLibrarianTradeFactory (I)Lnet/minecraft/village/TradeOffers$Factory;
+accessible method net/minecraft/village/TradeOffers createMasterLibrarianTradeFactory ()Lnet/minecraft/village/TradeOffers$Factory;
+accessible method net/minecraft/village/TradeOffers createPotion (Lnet/minecraft/registry/entry/RegistryEntry;)Lnet/minecraft/village/TradedItem;
+accessible method net/minecraft/village/TradeOffers createPotionStack (Lnet/minecraft/registry/entry/RegistryEntry;)Lnet/minecraft/item/ItemStack;

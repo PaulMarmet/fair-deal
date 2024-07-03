@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fair_deal:emerald_shard"
+    }
+  },
+  "result": {
+    "id": "minecraft:emerald",
+    "count": 1
+  }
+}

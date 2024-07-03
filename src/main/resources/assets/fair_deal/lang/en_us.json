@@ -1,0 +1,12 @@
+{
+  "fair_deal.filled_map.ruins": "Ruins Explorer Map",
+
+  "item.fair_deal.emerald_shard": "Emerald Shard",
+
+  "tag.item.c.shards.emerald" : "Emerald Shards",
+  "tag.item.c.shards" : "Shards",
+  "tag.item.c.corals" : "Corals",
+  "tag.item.fair_deal.wandering_trades.seeds" : "Wandering Seeds",
+  "tag.item.fair_deal.wandering_trades.flowers" : "Wandering Flowers",
+  "tag.item.fair_deal.wandering_trades.vegetation" : "Wandering Vegetation"
+}
