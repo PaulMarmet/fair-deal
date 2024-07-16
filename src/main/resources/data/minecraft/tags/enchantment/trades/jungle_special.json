@@ -1,5 +1,6 @@
 {
   "values": [
-    "minecraft:unbreaking"
+    "minecraft:sharpness",
+    "minecraft:mending"
   ]
 }
