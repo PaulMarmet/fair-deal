@@ -10,6 +10,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.map.MapDecorationTypes;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.StructureTags;
 import net.minecraft.registry.tag.TagKey;
@@ -22,6 +23,7 @@ import net.pm.fair_deal.FairProviders;
 import net.pm.fair_deal.village.FairFactories;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 
 import java.util.Map;
 
@@ -136,7 +138,7 @@ public class TradeMixin {
                         new FairFactories.SellItemShardFactory(Items.CLOCK, 18, 1, 15),
                         new FairFactories.SellItemShardFactory(Items.COMPASS, 14, 1, 15)},
                 5, new TradeOffers.Factory[]{
-                        TradeOffers.createMasterLibrarianTradeFactory(),
+                        FairFactories.createMasterLibrarianTradeFactoryF(),
                         new FairFactories.SellItemShardFactory(Items.NAME_TAG, 40, 1, 30)})));
         map.put(VillagerProfession.CARTOGRAPHER, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
@@ -422,4 +424,6 @@ public class TradeMixin {
                     new FairFactories.SellEnchantedShardFactory(Items.IRON_SWORD, 1, 1, 1, 0.2F),
                     new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.LONG_INVISIBILITY), 22, 1, 1, 1)
             }));
+
+
 }

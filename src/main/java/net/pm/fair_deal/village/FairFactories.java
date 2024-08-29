@@ -1,5 +1,6 @@
 package net.pm.fair_deal.village;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
 import net.minecraft.component.DataComponentTypes;
@@ -25,6 +26,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerType;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.Structure;
 import net.pm.fair_deal.item.FairDealItems;
@@ -342,5 +344,19 @@ public class FairFactories {
             });
             return new TradeOffer(new TradedItem(FairDealItems.EMERALD_SHARD, this.price), itemStack, this.maxUses, this.experience, this.multiplier);
         }
+    }
+
+    public static TradeOffers.Factory createMasterLibrarianTradeFactoryF() {
+        return new TradeOffers.TypedWrapperFactory(
+                ImmutableMap.<VillagerType, TradeOffers.Factory>builder()
+                        .put(VillagerType.DESERT, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.DESERT_SPECIAL_TRADE))
+                        .put(VillagerType.JUNGLE, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.JUNGLE_SPECIAL_TRADE))
+                        .put(VillagerType.PLAINS, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.PLAINS_SPECIAL_TRADE))
+                        .put(VillagerType.SAVANNA, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.SAVANNA_SPECIAL_TRADE))
+                        .put(VillagerType.SNOW, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.SNOW_SPECIAL_TRADE))
+                        .put(VillagerType.SWAMP, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.SWAMP_SPECIAL_TRADE))
+                        .put(VillagerType.TAIGA, new TradeOffers.EnchantBookFactory(30, EnchantmentTags.TAIGA_SPECIAL_TRADE))
+                        .build()
+        );
     }
 }
