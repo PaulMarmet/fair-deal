@@ -8,5 +8,10 @@
   "tag.item.c.corals" : "Corals",
   "tag.item.fair_deal.wandering_trades.seeds" : "Wandering Seeds",
   "tag.item.fair_deal.wandering_trades.flowers" : "Wandering Flowers",
-  "tag.item.fair_deal.wandering_trades.vegetation" : "Wandering Vegetation"
+  "tag.item.fair_deal.wandering_trades.vegetation" : "Wandering Vegetation",
+  "tag.item.fair_deal.farmer.crop_sell_init" : "Starting Crop Selection",
+  "tag.item.fair_deal.farmer.crop_sell_adv" : "Advanced Crop Selection",
+  "tag.item.fair_deal.shepherd.natural_wool" : "Natural Wool",
+
+  "tag.enchantment.fair_deal.trades.librarian_master" : "Natural Wool"
 }

@@ -3,6 +3,24 @@
     "minecraft:beetroot_seeds",
     "minecraft:melon_seeds",
     "minecraft:pumpkin_seeds",
-    "minecraft:wheat_seeds"
+    "minecraft:wheat_seeds",
+    "minecraft:potato",
+    "minecraft:carrot",
+    {
+      "id": "farmersdelight:rice",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:cabbage_seeds",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:tomato_seeds",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:onion",
+      "required": false
+    }
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "values": [
+    "minecraft:pumpkin",
+    "minecraft:apple",
+    "minecraft:melon",
+    "minecraft:cocoa_beans",
+    {
+      "id": "farmersdelight:rice",
+      "required": false
+    }
+  ]
+}

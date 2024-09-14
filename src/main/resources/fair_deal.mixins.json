@@ -3,7 +3,8 @@
   "package": "net.pm.fair_deal.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "TradeMixin"
+    "TradeMixin",
+    "TradeOfferHelperMixin"
   ],
   "injectors": {
     "defaultRequire": 1
