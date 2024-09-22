@@ -40,13 +40,13 @@ public class TradeMixin {
                 2, new TradeOffers.Factory[]{
                         new FairFactories.SellTagShardFactory(TagKey.of(RegistryKeys.ITEM, Identifier.of(FairDeal.MOD_ID,"farmer/crop_sell_adv")), 3, 8, 10, 5),
                         new FairFactories.SellItemShardFactory(Items.PUMPKIN_PIE, 10, 8, 8, 10),
-                        new FairFactories.BuyItemShardFactory(Items.BONE_MEAL, 24, 10, 5, 10)},
+                        new FairFactories.BuyItemShardFactory(Items.BONE_MEAL, 24, 9, 5)},
                 3, new TradeOffers.Factory[]{
                         new TradeOffers.SellItemFactory(Items.COOKIE, 2, 32, 7, 10),
-                        new FairFactories.SellTagShardFactory(TagKey.of(RegistryKeys.ITEM, Identifier.of(FairDeal.MOD_ID,"farmer/crop_sell_adv")), 3, 10, 10, 5),
-                        new FairFactories.BuyItemShardFactory(Items.BONE_MEAL, 24, 10, 5, 10)},
+                        new FairFactories.SellTagShardFactory(TagKey.of(RegistryKeys.ITEM, Identifier.of(FairDeal.MOD_ID,"farmer/crop_sell_adv")), 3, 10, 10, 8),
+                        new FairFactories.BuyItemShardFactory(Items.IRON_HOE, 1, 1, 10, 4)},
                 4, new TradeOffers.Factory[]{
-                        new TradeOffers.SellItemFactory(Blocks.CAKE, 4, 1, 12, 15),
+                        new TradeOffers.SellItemFactory(Blocks.CAKE, 7, 1, 2, 20),
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.NIGHT_VISION, 2400, 20),
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.JUMP_BOOST, 1600, 20),
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.GLOWING, 12000, 20),
@@ -54,39 +54,38 @@ public class TradeMixin {
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.DARKNESS, 600, 20),
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.BLINDNESS, 500, 20),
                         new TradeOffers.SellSuspiciousStewFactory(StatusEffects.POISON, 300, 20),
-                        new TradeOffers.SellSuspiciousStewFactory(StatusEffects.SATURATION, 80, 20)},
+                        new TradeOffers.SellSuspiciousStewFactory(StatusEffects.SATURATION, 300, 20)},
                 5, new TradeOffers.Factory[]{
-                        new FairFactories.ProcessItemShardFactory(Items.GOLD_INGOT, 4, 25, Items.GOLDEN_CARROT, 16, 4, 30, 0.1f),
-                        new FairFactories.ProcessItemShardFactory(Items.GOLD_INGOT, 4, 25, Items.GLISTERING_MELON_SLICE, 16, 4, 30, 0.1f)})));
+                        new TradeOffers.ProcessItemFactory(Items.GOLD_INGOT, 4, 3, Items.GOLDEN_CARROT, 16, 4, 30, 0.1f),
+                        new TradeOffers.ProcessItemFactory(Items.GOLD_INGOT, 4, 3, Items.GLISTERING_MELON_SLICE, 16, 4, 30, 0.1f),
+                        new FairFactories.ProcessItemShardFactory(Items.BUCKET, 1, 10, Items.MILK_BUCKET, 1, 4, 30, 0.02f)})));
         map.put(VillagerProfession.FISHERMAN, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
                         new FairFactories.BuyItemShardFactory(Items.STRING, 32, 16, 1),
                         new FairFactories.ProcessItemShardFactory(Items.COD, 6, 2, Items.COOKED_COD, 7, 16, 2, 0.05F),
-                        new FairFactories.SellItemShardFactory(Items.COD_BUCKET, 5, 1, 16, 3)},
+                        new FairFactories.ProcessItemShardFactory(Items.BUCKET, 1, 3, Items.COD_BUCKET, 1, 6, 2, 0.05F)},
                 2, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.COD, 3, 4, 5),
-                        new FairFactories.ProcessItemShardFactory(Items.SALMON, 6, 6, Items.COOKED_SALMON, 8, 16, 5, 0.05F),
-                        new FairFactories.SellItemShardFactory(Items.CAMPFIRE, 8, 1, 5)},
+                        new FairFactories.SellItemShardFactory(Items.COD, 3, 2, 5),
+                        new FairFactories.ProcessItemShardFactory(Items.SALMON, 6, 3, Items.COOKED_SALMON, 8, 16, 5, 0.05F),
+                        new FairFactories.ProcessItemShardFactory(Items.BUCKET, 1, 4, Items.SALMON_BUCKET, 1, 6, 2, 0.05F)},
                 3, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.SALMON, 4, 5, 10),
-                        new TradeOffers.SellEnchantedToolFactory(Items.FISHING_ROD, 2, 3, 10, 0.2F)},
+                        new FairFactories.SellItemShardFactory(Items.SALMON, 4, 2, 10),
+                        new FairFactories.SellItemShardFactory(Items.KELP, 2, 3, 10),
+                        new FairFactories.SellItemShardFactory(Items.INK_SAC, 4, 3, 10)},
                 4, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.TROPICAL_FISH, 12, 12, 20)},
+                        new FairFactories.ProcessItemShardFactory(Items.BUCKET, 1, 6, Items.TROPICAL_FISH_BUCKET, 1, 4, 15, 0.05F),
+                        new FairFactories.ProcessItemShardFactory(Items.BUCKET, 1, 8, Items.PUFFERFISH_BUCKET, 1, 6, 15, 0.05F),
+                        new FairFactories.SellItemShardFactory(Items.LILY_PAD, 8, 3, 20)},
                 5, new TradeOffers.Factory[]{
-                        new TradeOffers.SellItemFactory(Items.PUFFERFISH, 8, 2, 20),
-                        new TradeOffers.TypeAwareBuyForOneEmeraldFactory(1, 3, 20, ImmutableMap.of(
-                                VillagerType.PLAINS, Items.OAK_BOAT,
-                                VillagerType.TAIGA, Items.SPRUCE_BOAT,
-                                VillagerType.SNOW, Items.SPRUCE_BOAT,
-                                VillagerType.DESERT, Items.JUNGLE_BOAT,
-                                VillagerType.JUNGLE, Items.JUNGLE_BOAT,
-                                VillagerType.SAVANNA, Items.ACACIA_BOAT,
-                                VillagerType.SWAMP, Items.DARK_OAK_BOAT))
-                })));
+                        new FairFactories.SellItemShardFactory(Items.TROPICAL_FISH, 6, 2, 25),
+                        new FairFactories.SellItemShardFactory(Items.PUFFERFISH, 8, 2, 25),
+                        new TradeOffers.ProcessItemFactory(Items.INK_SAC, 7, 1, Items.GLOW_INK_SAC, 8, 6, 25, 0.05F),
+                        new TradeOffers.SellItemFactory(Items.NAUTILUS_SHELL, 6, 1, 50)
+                        })));
         map.put(VillagerProfession.SHEPHERD, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
                         new FairFactories.SellTagShardFactory(TagKey.of(RegistryKeys.ITEM, Identifier.of(FairDeal.MOD_ID,"shepherd/natural_wool")), 2, 5, 10, 1),
-                        new FairFactories.SellItemShardFactory(Items.SHEARS, 4, 1, 2)},
+                        new FairFactories.SellItemShardFactory(Items.SHEARS, 2, 1, 2)},
                 2, new TradeOffers.Factory[]{
                         new FairFactories.SellTagShardFactory(ItemTags.WOOL, 2, 1, 16, 5),
                         new FairFactories.SellTagShardFactory(ItemTags.WOOL_CARPETS, 2, 4, 16, 5)},
@@ -95,10 +94,11 @@ public class TradeMixin {
                         new FairFactories.SellTagShardFactory(ItemTags.BANNERS, 7, 1, 12, 10)},
                 4, new TradeOffers.Factory[]{
                         new FairFactories.SellTagShardFactory(ItemTags.WOOL, 3, 2, 16, 10),
-                        new FairFactories.SellTagShardFactory(ItemTags.BEDS, 10, 1, 12, 10)},
+                        new FairFactories.SellTagShardFactory(ItemTags.BEDS, 10, 1, 12, 15),
+                        new FairFactories.SellItemShardFactory(Items.PAINTING, 8, 3, 20)},
                 5, new TradeOffers.Factory[]{
                         new FairFactories.BuyTagShardFactory(TagKey.of(RegistryKeys.ITEM, Identifier.of("c","dyes")), 22, 16, 30),
-                        new TradeOffers.SellItemFactory(Items.PAINTING, 4, 3, 30)})));
+                        new TradeOffers.SellItemFactory(Items.PAINTING, 8, 3, 100)/*element painting*/})));
         map.put(VillagerProfession.FLETCHER, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
                         new FairFactories.BuyItemShardFactory(Items.FEATHER, 20, 16, 1),
@@ -112,25 +112,24 @@ public class TradeMixin {
                         new FairFactories.SellItemShardFactory(Items.CROSSBOW, 14, 1, 15)},
                 4, new TradeOffers.Factory[]{
                         new FairFactories.BuyItemShardFactory(Items.FEATHER, 16, 16, 15),
-                        new TradeOffers.SellEnchantedToolFactory(Items.BOW, 1, 3, 25)},
+                        new FairFactories.ProcessItemShardFactory(Items.GLOWSTONE_DUST, 3, 6, Items.FLINT, 8, 12, 20, 0.05F)},
                 5, new TradeOffers.Factory[]{
                         new FairFactories.BuyItemShardFactory(Items.TRIPWIRE_HOOK, 32, 12, 30),
                         new TradeOffers.SellEnchantedToolFactory(Items.CROSSBOW, 3, 3, 30),
                         new TradeOffers.SellPotionHoldingItemFactory(Items.ARROW, 8, Items.TIPPED_ARROW, 8, 2, 12, 30)})));
         map.put(VillagerProfession.LIBRARIAN, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
-                        new FairFactories.BuyItemShardFactory(Items.LEATHER, 24, 16, 1),
-                        new FairFactories.SellItemShardFactory(Items.BOOK, 5, 3, 15, 2),
-                        new FairFactories.BuyItemShardFactory(Items.INK_SAC, 40, 12, 1)},
+                        new FairFactories.BuyItemShardFactory(Items.LEATHER, 16, 16, 1),
+                        new FairFactories.BuyItemShardFactory(Items.INK_SAC, 32, 12, 1)},
                 2, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.LANTERN, 4, 1, 32, 3),
-                        new FairFactories.SellItemShardFactory(Items.CHISELED_BOOKSHELF, 4, 2, 10, 5),
+                        new FairFactories.SellItemShardFactory(Items.CHISELED_BOOKSHELF, 4, 2, 10, 3),
                         TradeOffers.createLibrarianTradeFactory(5),
-                        new FairFactories.ProcessItemShardFactory(Items.LEATHER, 2, 2, Items.BOOK, 3, 5, 10, 0.1f)},
+                        new FairFactories.SellItemShardFactory(Items.BOOK, 5, 3, 15, 5)},
                 3, new TradeOffers.Factory[]{
-                        TradeOffers.createLibrarianTradeFactory(15),
+                        //TradeOffers.createLibrarianTradeFactory(15),
                         new FairFactories.SellItemShardFactory(Items.CLOCK, 18, 1, 15),
-                        new FairFactories.SellItemShardFactory(Items.COMPASS, 14, 1, 15)},
+                        new FairFactories.ProcessItemShardFactory(Items.LEATHER, 2, 2, Items.BOOK, 3, 5, 15, 0.1f),
+                        new FairFactories.BuyItemShardFactory(Items.PAPER, 48, 8, 5)},
                 4, new TradeOffers.Factory[]{
                         new FairFactories.SellItemShardFactory(Items.WRITABLE_BOOK, 14, 12,8, 20),
                         FairFactories.createMasterLibrarianTradeFactoryF()},
@@ -192,13 +191,13 @@ public class TradeMixin {
                         new FairFactories.BuyItemShardFactory(Items.GLASS_BOTTLE, 60, 12, 15),
                         new FairFactories.SellItemShardFactory(Items.ENDER_PEARL, 36, 1, 30)},
                 5, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.LONG_INVISIBILITY), 22, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.REGENERATION), 26, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.HEALING), 22, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.STRENGTH), 38, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.WEAKNESS), 42, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(TradeOffers.createPotionStack(Potions.LEAPING), 22, 1, 1, 30),
-                        new FairFactories.SellItemShardFactory(Items.EXPERIENCE_BOTTLE, 6, 1, 30)})));
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.LONG_INVISIBILITY), 3, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.REGENERATION), 3, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.HEALING), 3, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.STRENGTH), 4, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.WEAKNESS), 5, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(TradeOffers.createPotionStack(Potions.LEAPING), 3, 1, 1, 30),
+                        new TradeOffers.SellItemFactory(Items.EXPERIENCE_BOTTLE, 4, 9, 30)})));
         map.put(VillagerProfession.ARMORER, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
                         new FairFactories.BuyItemShardFactory(Items.COAL, 12, 12, 1),
@@ -336,20 +335,31 @@ public class TradeMixin {
                         new FairFactories.ProcessItemShardFactory(Items.DIAMOND, 2, 29, Items.DIAMOND_PICKAXE, 1, 3, 25, 0.2F)})));
         map.put(VillagerProfession.BUTCHER, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.CHICKEN, 6, 2, 1),
-                        new FairFactories.SellItemShardFactory(Items.PORKCHOP, 8, 3, 2),
-                        new FairFactories.SellItemShardFactory(Items.RABBIT, 4, 2, 2),
-                        new FairFactories.SellItemShardFactory(Items.RABBIT_STEW, 6, 1, 2)},
+                        new FairFactories.SellItemShardFactory(Items.CHICKEN, 2, 1, 2),
+                        new FairFactories.SellItemShardFactory(Items.PORKCHOP, 4, 1, 2),
+                        new FairFactories.SellItemShardFactory(Items.RABBIT, 2, 1, 2)},
                 2, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.COOKED_PORKCHOP, 14, 5, 3, 5),
-                        new FairFactories.SellItemShardFactory(Items.COOKED_CHICKEN, 10, 8, 4, 5)},
+                        new FairFactories.SellItemShardFactory(Items.BEEF, 5, 1, 5),
+                        new FairFactories.SellItemShardFactory(Items.MUTTON, 5, 1, 5),
+                        new FairFactories.ProcessItemShardFactory(Items.CHICKEN, 1, 2, Items.COOKED_CHICKEN, 2, 16, 5, 0.05F),
+                        new FairFactories.ProcessItemShardFactory(Items.RABBIT, 1, 2, Items.COOKED_RABBIT, 2, 16, 5, 0.05F),
+                        new FairFactories.SellItemShardFactory(Items.RABBIT_STEW, 6, 1, 5)},
                 3, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.MUTTON, 14, 16, 10),
-                        new FairFactories.SellItemShardFactory(Items.BEEF, 20, 16, 10)},
+                        new FairFactories.ProcessItemShardFactory(Items.PORKCHOP, 1, 3, Items.COOKED_PORKCHOP, 2, 16, 10, 0.05F),
+                        new FairFactories.ProcessItemShardFactory(Items.BEEF, 1, 3, Items.COOKED_BEEF, 2, 16, 10, 0.05F),
+                        new FairFactories.ProcessItemShardFactory(Items.MUTTON, 1, 3, Items.COOKED_MUTTON, 2, 16, 10, 0.05F),
+                        new FairFactories.SellItemShardFactory(Items.COOKED_CHICKEN, 4, 1, 10),
+                        new FairFactories.SellItemShardFactory(Items.COOKED_RABBIT, 4, 1, 10)},
                 4, new TradeOffers.Factory[]{
-                        new FairFactories.SellItemShardFactory(Items.DRIED_KELP_BLOCK, 10, 12, 20)},
+                        new FairFactories.SellItemShardFactory(Items.LEATHER, 5, 3, 20),
+                        new FairFactories.SellItemShardFactory(Items.RABBIT_HIDE, 2, 1, 20),
+                        new FairFactories.SellItemShardFactory(Items.COOKED_MUTTON, 6, 1, 15),
+                        new FairFactories.SellItemShardFactory(Items.COOKED_PORKCHOP, 6, 1, 15),
+                        new FairFactories.SellItemShardFactory(Items.COOKED_BEEF, 6, 1, 15)},
                 5, new TradeOffers.Factory[]{
-                        new FairFactories.BuyItemShardFactory(Items.SWEET_BERRIES, 64, 9, 30)})));
+                        new FairFactories.BuyItemShardFactory(Items.SWEET_BERRIES, 64, 9, 30),
+                        new FairFactories.BuyItemShardFactory(Items.GLOW_BERRIES, 24, 9, 30),
+                        new TradeOffers.SellItemFactory(Items.RABBIT_FOOT, 6, 1, 50)})));
         map.put(VillagerProfession.LEATHERWORKER, TradeOffers.copyToFastUtilMap(ImmutableMap.of(
                 1, new TradeOffers.Factory[]{
                         new FairFactories.SellItemShardFactory(Items.LEATHER, 12, 16, 2),
